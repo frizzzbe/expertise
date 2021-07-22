@@ -32,37 +32,24 @@
 									<li class="nav-item"><a href="#contacts" class="nav-link">Контакты</a></li>
 							</ul>
 					</nav>
-					<!-- <a href="tel:+79054994438" class="phone">+7 (905) 499-44-38</a>
 					<button id="burger" class="open-mob-nav" aria-label="burger-menu">
 						<span class="burger"></span>
-					</button> -->
+					</button>
         </div>
     </header>
 
-	<!-- <div class="">
+	<div class="">
 		<div class="mob-nav" id="mob-nav">
 			<ul>
-				<li>
-					<a class="mob-nav-link" href="#about">О нас</a>
-				</li>
-				<li>
-					<a class="mob-nav-link" href="#team">Персонал</a>
-				</li>
-				<li>
-					<a class="mob-nav-link" href="#hotel">Наш отель</a>
-				</li>
-				<li>
-					<a class="mob-nav-link" href="#services">Услуги</a>
-				</li>
-				<li>
-					<a class="mob-nav-link" href="./legal-info.html">Документы</a>
-				</li>
-				<li>
-					<a class="mob-nav-link" href="#form">Записаться</a>
-				</li>
+				<li class="mob-nav-link"><a href="#main" class="nav-link">Главная</a></li>
+				<li class="mob-nav-link"><a href="#about" class="nav-link">О нас</a></li>
+				<li class="mob-nav-link"><a href="#services" class="nav-link">Услуги</a></li>
+				<li class="mob-nav-link"><a href="#why-we" class="nav-link">Почему мы</a></li>
+				<li class="mob-nav-link"><a href="#benefit" class="nav-link">Преимущества</a></li>
+				<li class="mob-nav-link"><a href="#contacts" class="nav-link">Контакты</a></li>
 			</ul>
 		</div> 
-	</div> -->
+	</div>
 
     <main>
 			<section class="main-block">
@@ -175,7 +162,7 @@
 				</div>
 			</section>
     </main>
-		<footer class="main-footer">
+		<footer class="main-footer" id="contacts">
 			<div class="container">
 				<a href="#" class="logo">
 					<img src="img/logo.svg" alt="Логотип компании EXPERTISE" width="265" height="44">
@@ -185,10 +172,37 @@
 				<p class="footer-info"><span class="info-name">Адрес: </span>357500, Ставропольский край, город Пятигорск, ул. Нежнова 21/2</p>
 				<p class="footer-info"><span class="info-name">Инстаграм: </span><a href="https://www.instagram.com/expert_service.26/">@expert_service.26</a></p>
 				<p class="footer-info"><span class="info-name">Почта: </span><a href="mailto:expert_service.26@mail.ru">expert_service.26@mail.ru</a></p>
-				<p class="footer-info"><span class="info-name">Телефон: </span><a href="tel:+79187575133">7(918)757-51-33</a></p>
+				<p class="footer-info"><span class="info-name">Телефон: </span><a href="tel:+79187575133">+7(918)757-51-33</a></p>
 
 				<p class="copyright">© 2021 ООО "Эксперт- сервис", г. Пятигорск. Все права защищены.</p>
 			</div>
 		</footer>
+
+		<script>
+			const burgerBtn = document.querySelector('#burger .burger'),
+						mobNav = document.querySelector('#mob-nav'),
+						navLinks = document.querySelectorAll('.mob-nav-link'),
+  					body = document.querySelector('html');
+
+			burgerBtn.addEventListener('click', ()=>{
+				burgerBtn.classList.toggle('is-open');
+				mobNav.classList.toggle('is-open');
+
+				if (burger.classList.contains('is-open')) {
+					body.style.overflow = 'hidden';
+				} else {
+					body.style.overflow = '';
+				}
+			});
+
+			
+			for (let navLink of navLinks) {
+				navLink.addEventListener('click', (e) => {
+					burgerBtn.classList.toggle('is-open');
+					mobNav.classList.toggle('is-open');
+					body.style.overflow = '';
+				});
+			}
+		</script>
 </body>
 </html>

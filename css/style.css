@@ -76,7 +76,7 @@ a:focus {
   list-style: none;
   padding: 0;
   margin: 0;
-  gap: 0 32px;
+  gap: 0 20px;
 }
 
 .nav-item {
@@ -130,9 +130,15 @@ a:focus {
   font-size: 18px;
   line-height: 27px;
   color: #FFFFFF;
-  background: #F25822;
+  background-color: #F25822;
   box-shadow: 4px 4px 8px rgba(242, 88, 34, 0.2);
   border-radius: 50px;
+  transition: background-color 0.2s;
+}
+
+.main-link:hover {
+  color: #FFFFFF;
+  background-color: #f36b39;
 }
 
 section.about {
@@ -373,4 +379,224 @@ footer .logo img {
   margin-top: 54px;
   border-top: 1px solid #CCCCCC;
   text-align: center;
+}
+
+.open-mob-nav {
+	position: relative;
+	display: none;
+	z-index: 1000;
+	background: none;
+	border: 0;
+	cursor: pointer;
+  align-self: flex-end;
+}
+.open-mob-nav:focus {
+	outline: none;
+}
+.mob-nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  text-align: center;
+  background: #FFF;
+  opacity: 0;
+  z-index: -1;
+  visibility: hidden;
+  transition: all .375s;
+}
+
+.mob-nav.is-open {
+  opacity: 1;
+  z-index: 100;
+  visibility: visible;
+}
+
+.mob-nav::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: -15px;
+  background: #f67b50;
+  transform-origin: 0 0;
+  transform: skew(-14deg) translateX(-120%);
+  transition: all .275s .1s;
+}
+
+.mob-nav.is-open::before {
+  transform: skew(-14deg) translateX(0);
+}
+
+/* Skewing effect on menu links */
+.mob-nav ul {
+  display: inline-flex;
+  flex-direction: column;
+  height: 100%; /* Should be 100%, but we have a notice message :D */
+  align-items: flex-end;
+  justify-content: center;
+  transform: translateX(-18%) skew(-16deg);
+}
+
+.mob-nav li {
+  display: block;
+  margin: .5rem 0;
+  text-align: right;
+  transform: skew(16deg);
+}
+
+/* Apparition effect on links */
+.mob-nav a {
+  opacity: 0;
+  transform: translateY(-10px);
+}
+
+.mob-nav.is-open a {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* Decoration */
+.mob-nav ul,
+.mob-nav li {
+	list-style: none;
+	padding: 0;
+}
+.mob-nav a {
+	display: block;
+	padding: 12px 0;
+	color: #000000;
+	font-size: 1.4em;
+	text-decoration: none;
+	font-weight: 500;
+}
+
+
+.burger {
+	position: relative;
+	display: block;
+	width: 28px;
+	height: 2px;
+	margin: 0 auto;
+	background: #000000;
+	transform: skew(5deg);
+	transition: all .275s;
+}
+
+.burger:after,
+.burger:before {
+	content: '';
+	display: block;
+	height: 100%;
+	background: #000000;
+	transition: all .275s;
+}
+
+.burger:after {
+	transform: translateY(-10.5px) translateX(-6px) skew(-20deg);
+}
+
+.burger:before {
+	transform: translateY(-16px) skew(-10deg);
+}
+
+/* Toggle State part */
+.is-open.burger {
+	transform: skew(5deg) translateY(-8px) rotate(-45deg);
+}
+
+.is-open.burger:before {
+	transform: translateY(0px) skew(-10deg) rotate(75deg);
+}
+
+.is-open.burger:after {
+	transform: translateY(-12px) translateX(10px) skew(-20deg);
+    opacity: 0;
+}
+
+@media screen and (max-width: 1400px) {
+  .page-header .container {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .benefit {
+    background: none;
+  }
+
+  .benefit-content {
+    margin: 0 auto;
+    padding: 10px 0 30px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .container {
+    width: 75%;
+  }
+
+  .logo {
+    width: 220px;
+  }
+
+  .nav-list {
+    gap: 0 15px;
+  }
+
+  .nav-item a {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  
+  .main-block {
+    padding-top: 70px;
+  }
+
+  .main-block {
+    background-size: 70%;
+    background-position: 200% 50%;
+  }
+
+  section.about {
+    padding-bottom: 20px;
+  }
+
+  .services .section-title {
+    margin-bottom: 30px;
+    padding-top: 20px;
+  }
+
+  .service-itm {
+    align-items: center;
+  }
+
+  .serv-descr {
+    text-align: center;
+  }
+
+  .services,
+  .why-we {
+    padding-bottom: 0;
+  }
+
+  .section-title {
+    padding-top: 10px;
+  }
+
+  .benefit-content {
+    padding: 30px 0;
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  .open-mob-nav {
+    display: block;
+  }
+
+  .main-nav {
+    display: none;
+  }
 }
