@@ -280,6 +280,10 @@ section.about {
   padding-bottom: 80px;
 }
 
+.why-we .service-cont {
+  margin-top: 56px;
+}
+
 .why-we .service-itm {
   align-items: center;
   background-color: #fff;
@@ -318,4 +322,55 @@ section.about {
 
 .benefit .list-item {
   margin: 10px 0;
+}
+
+footer {
+  background-color: #F3F3F3;
+  padding: 21px 0 27px;
+}
+
+footer .logo {
+  display: inline-block;
+  max-width: 100%;
+  width: 386px;
+}
+
+footer .logo img {
+  width: 100%;
+}
+
+.footer-desc {
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 141%;
+  margin-top: 50px;
+  color: #000000;
+}
+
+.footer-info {
+  color: #666666;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 150%;
+  margin: 30px 0;
+}
+
+.footer-info a:hover {
+  color: #333333;
+  text-decoration: underline;
+}
+
+.info-name {
+  color: #333333;
+}
+
+.copyright {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 230%;
+  color: #888888;
+  padding: 13px 0;
+  margin-top: 54px;
+  border-top: 1px solid #CCCCCC;
+  text-align: center;
 }
