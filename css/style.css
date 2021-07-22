@@ -61,10 +61,6 @@ a:focus {
   line-height: 0;
 }
 
-.main-nav {
-
-}
-
 .page-header .container {
   display: flex;
   justify-content: space-between;
@@ -187,8 +183,9 @@ section.about {
 
 .service-cont {
   display: flex;
+  gap: 20px;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: flex-start;
   list-style: none;
   padding: 0;
@@ -198,7 +195,9 @@ section.about {
   max-width: 400px;
   min-width: 300px;
   padding: 40px 30px;
-  flex-basis: 33%;
+  flex-basis: 30%;
+  flex-grow: 1;
+  /* margin: 10px; */
 
   display: flex;
   flex-direction: column;
@@ -276,8 +275,14 @@ section.about {
   background-size: 12px 8px;
 } 
 
+.why-we {
+  background-color: #FAFAFA;
+  padding-bottom: 80px;
+}
+
 .why-we .service-itm {
   align-items: center;
+  background-color: #fff;
 }
 .why-we .serv-title { 
   text-align: center;
@@ -289,4 +294,28 @@ section.about {
   line-height: 150%;
   text-align: center;
   color: #333333;
+}
+
+.benefit {
+  background: url('../img/benefit.jpg') no-repeat center;
+  background-color: #fff;
+  background-size: 50%;
+  background-position: left;  
+}
+
+.benefit-content {
+  position: relative;
+  right: 0;
+  padding: 100px 0;
+  margin-left: auto;
+  width: 600px;
+  max-width: 100%;
+}
+
+.benefit .section-title {
+  padding-top: 0;
+}
+
+.benefit .list-item {
+  margin: 10px 0;
 }
