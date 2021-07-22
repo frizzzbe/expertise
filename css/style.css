@@ -169,6 +169,22 @@ section.about {
   color: #666666;
 }
 
+.section-par {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 150%;
+  text-align: center;
+  color: #666666;
+}
+
+.services {
+  padding-bottom: 56px;
+}
+
+.services .section-title {
+  margin-bottom: 74px;
+}
+
 .service-cont {
   display: flex;
   flex-wrap: wrap;
@@ -181,11 +197,24 @@ section.about {
 .service-itm {
   max-width: 400px;
   min-width: 300px;
-  flex-basis: 30%;
+  padding: 40px 30px;
+  flex-basis: 33%;
+
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
+
+  box-sizing: border-box;
+  border-radius: 6px;
+
+  transition: all 0.3s;
+}
+
+/* .service-itm--active */
+.service-itm:hover {
+  background: #FFFFFF;
+  box-shadow: 15px 25px 56px 6px rgba(0, 0, 0, 0.06);
 }
 
 .service-icon {
@@ -246,3 +275,18 @@ section.about {
   background: url('../img/list-marker.svg') no-repeat center;
   background-size: 12px 8px;
 } 
+
+.why-we .service-itm {
+  align-items: center;
+}
+.why-we .serv-title { 
+  text-align: center;
+}
+
+.why-we .serv-descr {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 150%;
+  text-align: center;
+  color: #333333;
+}
