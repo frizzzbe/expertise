@@ -161,7 +161,8 @@ section.about {
 }
 
 .about-txt {
-  margin-top: 40px;
+  margin-top: 6px;
+  margin-bottom: 0;
   font-style: normal;
   font-weight: normal;
   font-size: 24px;
@@ -388,7 +389,8 @@ footer .logo img {
 	background: none;
 	border: 0;
 	cursor: pointer;
-  align-self: flex-end;
+  align-self: center;
+  transform: translateY(10px);
 }
 .open-mob-nav:focus {
 	outline: none;
@@ -592,11 +594,85 @@ footer .logo img {
 
 
 @media screen and (max-width: 768px) {
+  .container {
+    width: 85%;
+  }
+  
   .open-mob-nav {
     display: block;
   }
 
   .main-nav {
     display: none;
+  }
+  
+  .main-block {
+    background-position: 200% 85%;
+  }
+  
+  .main-heading {
+    font-size: 34px;
+    line-height: 43px;
+  }
+
+  .section-title {
+    padding-top: 15px;
+    font-size: 27px;
+    line-height: 32px;
+    margin-bottom: 5px;
+  }
+
+  .about-txt {
+    font-size: 14px;
+    line-height: 143%;
+  }
+
+  .service-itm {
+    padding: 10px 15px;
+  }
+  
+  .serv-title {
+    margin-top: 10px;
+    margin-bottom: 0px;
+  }
+
+  .serv-descr {
+    margin-top: 10px;
+    font-size: 16px;
+  }
+
+  .list-item {
+    font-size: 14px;
+    line-height: 23px;
+    margin: 8px 0;
+  }
+
+  .list-item::before {
+    width: 22px;
+    height: 22px;
+  }
+
+  .section-par,
+  .why-we .serv-descr {
+    font-size: 14px;
+    margin-bottom: 5px;  
+  }
+
+  .footer-desc {
+    font-size: 14px;
+    margin-top: 24px;
+  }
+
+  .footer-info {
+    font-size: 11px;
+    margin: 14px 0;
+  }
+
+  .copyright {
+    font-size: 12px;
+    line-height: 170%;
+    padding: 13px 0;
+    margin-top: 25px;
+    margin-bottom: 0;
   }
 }
